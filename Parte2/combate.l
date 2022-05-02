@@ -8,6 +8,8 @@
     int VidaJugador2 = 100;
     int pegarse = 0;
     int quien = 0;
+    
+
 %}
 
 %option noyywrap
@@ -25,6 +27,10 @@ Bloqueo [B][l][o][q][u][e][o]
 Distancia [0-9]|([0-9]+)
 JohnnyCage [J][o][h][n][n][y][C][a][g][e]
 Kano [K][a][n][o]
+F [F]
+Fatality {F}{Movimientos}+{MovimientosBasicos}+
+FatalityJohnnyCage {JohnnyCage}:{Fatality}
+FatalityKano {Kano}:{Fatality}
 Final [F][i][n]
 
 %%
@@ -82,6 +88,34 @@ Final [F][i][n]
                 if(VidaJugador2 < 1){
                     printf("\n Johnny Cage GANAAAA");
                     printf("\n Kano tambaleandose... \n\n");
+                }
+                    
+            }
+}
+{FatalityJohnnyCage} {
+
+            if(VidaJugador1 > 0 && VidaJugador2 > 0){
+                printf("\n Los jugadores siguen con vida ");
+                
+            }else {
+                
+                if(VidaJugador2 < 1){
+                    printf("\n Fatality %s ",yytext);
+                    printf("\n FATALITYYYYY ");
+                }
+                    
+            }
+}
+{FatalityKano} {
+
+            if(VidaJugador1 > 0 && VidaJugador2 > 0){
+                printf("\n Los jugadores siguen con vida ");
+                
+            }else {
+                
+                if(VidaJugador1 < 1){
+                    printf("\n Fatality de Kano %s ",yytext);
+                    printf("\n FATALITYYYYY ");
                 }
                     
             }
