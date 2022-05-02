@@ -6,7 +6,7 @@ JohnnyCage Y
 JohnnyCage X
 JohnnyCage ArribaA
 Kano ArribaB
-80
+20
 JohnnyCage A
 Kano B
 20
@@ -14,7 +14,7 @@ JohnnyCage A
 Kano B
 JohnnyCage AbajoA
 Kano IzquierdaB
-30
+20
 Kano B
 20
 JohnnyCage A
@@ -23,3 +23,4 @@ Kano B
 
 
 Fin
+

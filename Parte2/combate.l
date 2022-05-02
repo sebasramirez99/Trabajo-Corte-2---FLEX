@@ -73,8 +73,7 @@ Final [F][i][n]
 {Final} {
             if(VidaJugador1 > 0 && VidaJugador2 > 0){
                 printf("\n Los jugadores siguen con vida ");
-                printf("\n Johnny Cage: %d", VidaJugador1);
-                printf("\n Kano: %d", VidaJugador2);
+                
             }else {
                 if(VidaJugador1 < 1 ){
                     printf("\n Kano GANAAAA");
@@ -96,7 +95,8 @@ int main(int argc, char *argv[]){
         printf("\nNo se puede abrir el archivo: %s\n", argv[1]);
         return 1;
     }else{
-        printf("\nEl archivo %s se abrio correctamente\n", argv[1]);
+        printf("\nEl archivo %s se abrio correctamente\n\n", argv[1]);
+        
         yylex(); 
     }
     printf("\n Johnny Cage: %d", VidaJugador1);

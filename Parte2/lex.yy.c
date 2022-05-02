@@ -858,8 +858,7 @@ YY_RULE_SETUP
 {
             if(VidaJugador1 > 0 && VidaJugador2 > 0){
                 printf("\n Los jugadores siguen con vida ");
-                printf("\n Johnny Cage: %d", VidaJugador1);
-                printf("\n Kano: %d", VidaJugador2);
+                
             }else {
                 if(VidaJugador1 < 1 ){
                     printf("\n Kano GANAAAA");
@@ -875,10 +874,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 90 "combate.l"
+#line 89 "combate.l"
 ECHO;
 	YY_BREAK
-#line 882 "lex.yy.c"
+#line 881 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1895,7 +1894,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 90 "combate.l"
+#line 89 "combate.l"
 
 
 int main(int argc, char *argv[]){
@@ -1905,7 +1904,8 @@ int main(int argc, char *argv[]){
         printf("\nNo se puede abrir el archivo: %s\n", argv[1]);
         return 1;
     }else{
-        printf("\nEl archivo %s se abrio correctamente\n", argv[1]);
+        printf("\nEl archivo %s se abrio correctamente\n\n", argv[1]);
+        
         yylex(); 
     }
     printf("\n Johnny Cage: %d", VidaJugador1);
