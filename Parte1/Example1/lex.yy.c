@@ -1738,6 +1738,4 @@ void yyfree (void * ptr )
 
 #line 7 "hide-digits.l"
 
-int main (){
 
-}
