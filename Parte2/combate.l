@@ -1,7 +1,13 @@
 
 %{
+    #include<stdio.h>
+    #include<string.h>
+    #include<stdlib.h>
     FILE *yyin;
-    int num = 0;
+    int VidaJugador1 = 100;
+    int VidaJugador2 = 100;
+    int pegarse = 0;
+    int quien = 0;
 %}
 
 %option noyywrap
@@ -15,24 +21,45 @@ Izquierda [I][z][q][u][i][e][r][d][a]
 Derecha [D][e][r][e][c][h][a]
 Movimientos ({Arriba}|{Abajo}|{Izquierda}|{Derecha})
 Bloqueo [B][l][o][q][u][e][o]
-Distancia [0-9]
-JohnnyCage [J][o][h][n][n][y][ ][C][a][g][e]
+Distancia [0-9]|([0-9]+)
+JohnnyCage [J][o][h][n][n][y][C][a][g][e]
 Kano [K][a][n][o]
-LiuKang [L][i][u][ ][K][a][n][g]
-SubZero [S][u][b][-][Z][e][r][o]
-SonyaBlade [S][o][n][y][a][ ][B][l][a][d][e]
-Jade [J][a][d][e]
-LiMei [L][i][ ][M][e][i]
-Skarlet [S][k][a][r][l][e][t]
-Personajes {JohnnyCage}|{Kano}|{LiuKang}|{SubZero}|{SonyaBlade}|{Jade}|{LiMei}|{Skarlet}
-Jugada {Personajes}:({Movimientos})*({Bloqueo})*({MovimientosBasicos})*
+
 
 %%
 
-{Distancia} {printf("\nEsto es la distancia de los jugadores ");} 
-{Jugada} {printf("\nEsto es una jugada");} 
-. {printf("\nEsto no se que es");} 
 
+{Distancia} {
+                if(atoi(yytext)<41){
+                    pegarse = 1;
+                }else{
+                    pegarse = 0;
+                }
+            }
+{JohnnyCage} {  quien = 2;}
+{Kano} {quien = 1;}
+{Movimientos} {
+                if(pegarse==1){
+                    if(quien == 2){
+                        VidaJugador2 = VidaJugador2-10;
+                        printf("-10 a kano por movimiento");
+                    }else{
+                        VidaJugador1 = VidaJugador1-10;
+                        printf("-10 a JohnnyCage por movimiento");
+                    }
+                }
+              }
+{MovimientosBasicos} {
+                        if(pegarse==1){
+                            if(quien == 2){
+                                VidaJugador2 = VidaJugador2-10;
+                                 printf("-10 a kano por basico");
+                            }else{
+                                VidaJugador1 = VidaJugador1-10;
+                                printf("-10 a JohnnyCage por basico");
+                            }
+                        }
+                     }
 %%
 
 int main(int argc, char *argv[]){
@@ -45,8 +72,9 @@ int main(int argc, char *argv[]){
         printf("\nEl archivo %s se abrio correctamente\n", argv[1]);
         yylex(); 
     }
-    printf("FLEX finalizo la lectura del archivo %s \n", argv[1]);
-    fclose(yyin);
+    printf("\nLa vida de los jugadores es %d %d", VidaJugador1, VidaJugador2);
+    printf("\nFLEX finalizo la lectura del archivo %s \n", argv[1]);
+    
     return 0;
 }
 
