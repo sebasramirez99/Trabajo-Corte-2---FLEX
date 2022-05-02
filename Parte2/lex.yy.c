@@ -373,8 +373,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 6
-#define YY_END_OF_BUFFER 7
+#define YY_NUM_RULES 7
+#define YY_END_OF_BUFFER 8
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -382,13 +382,13 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[46] =
+static const flex_int16_t yy_accept[50] =
     {   0,
-        0,    0,    7,    6,    1,    5,    5,    6,    6,    6,
-        6,    1,    0,    0,    0,    0,    0,    0,    0,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    0,    3,
-        4,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-        0,    0,    0,    2,    0
+        0,    0,    8,    7,    1,    5,    5,    7,    7,    7,
+        7,    7,    1,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,    6,    0,    0,    0,    0,    0,    0,
+        0,    0,    3,    0,    0,    0,    0,    0,    4,    0,
+        0,    0,    0,    0,    0,    0,    0,    2,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -399,14 +399,14 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    2,    2,    2,
         2,    2,    2,    2,    2,    2,    2,    1,    1,    1,
-        1,    1,    1,    1,    3,    4,    5,    6,    1,    1,
-        1,    1,    7,    8,    9,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    3,    4,    5,    6,    1,    7,
+        1,    1,    8,    9,   10,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    4,    4,    1,
-        1,    1,    1,    1,    1,    1,   10,   11,   12,   13,
+        1,    1,    1,    1,    1,    1,   11,   12,   13,   14,
 
-       14,    1,   15,   16,   17,   18,    1,    1,    1,   19,
-       20,    1,   21,   22,    1,    1,   23,    1,    1,    1,
-       24,   25,    1,    1,    1,    1,    1,    1,    1,    1,
+       15,    1,   16,   17,   18,   19,    1,    1,    1,   20,
+       21,    1,   22,   23,    1,    1,   24,    1,    1,    1,
+       25,   26,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -423,59 +423,61 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[26] =
+static const YY_CHAR yy_meta[27] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    1
     } ;
 
-static const flex_int16_t yy_base[47] =
+static const flex_int16_t yy_base[51] =
     {   0,
-        0,    8,   54,   55,   51,    2,   55,   38,   26,   30,
-       39,   46,   37,   24,   23,   23,   27,   23,   23,   23,
-       25,   15,   18,   16,   15,   23,   21,   15,   12,   55,
-       55,   20,   13,   14,    3,   16,    3,   18,    9,   11,
-       10,    4,    4,   55,   55,    0
+        0,    9,   60,   61,   57,    2,   61,   43,   39,   30,
+       34,   43,   51,   41,   28,   27,   29,   26,   30,   26,
+       26,   26,   28,   61,   18,   21,   19,   18,   26,   24,
+       18,   15,   61,   17,   23,   16,   17,    6,   61,   19,
+        6,   23,   13,   15,   13,    7,    7,   61,   61,    0
     } ;
 
-static const flex_int16_t yy_def[47] =
+static const flex_int16_t yy_def[51] =
     {   0,
-       46,   46,   45,   45,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,    0,   45
+       50,   50,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49,   49,    0,   49
     } ;
 
-static const flex_int16_t yy_nxt[81] =
+static const flex_int16_t yy_nxt[88] =
     {   0,
-        4,    5,    6,    7,   45,    8,    9,   10,   11,    5,
-        6,    7,   13,    8,    9,   10,   11,   44,   43,   31,
-       42,   41,   40,   14,   39,   31,   38,   37,   36,   31,
-       35,   34,   33,   32,   31,   30,   29,   28,   27,   26,
-       25,   24,   23,   22,   21,   20,   19,   12,   18,   17,
-       16,   15,   12,   45,    3,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45
+        4,    5,    6,    7,   49,    8,    9,   10,   11,   12,
+        5,    6,    7,   14,    8,    9,   10,   11,   12,   39,
+       39,   48,   47,   34,   15,   46,   45,   44,   43,   34,
+       42,   41,   40,   34,   38,   37,   36,   35,   34,   33,
+       32,   31,   30,   29,   28,   27,   26,   25,   24,   23,
+       22,   21,   13,   20,   19,   18,   17,   16,   13,   49,
+        3,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49
     } ;
 
-static const flex_int16_t yy_chk[81] =
+static const flex_int16_t yy_chk[88] =
     {   0,
-       46,    1,    1,    1,    0,    1,    1,    1,    1,    2,
-        2,    2,    6,    2,    2,    2,    2,   43,   42,   41,
-       40,   39,   38,    6,   37,   36,   35,   34,   33,   32,
-       29,   28,   27,   26,   25,   24,   23,   22,   21,   20,
-       19,   18,   17,   16,   15,   14,   13,   12,   11,   10,
-        9,    8,    5,    3,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
-       45,   45,   45,   45,   45,   45,   45,   45,   45,   45
+       50,    1,    1,    1,    0,    1,    1,    1,    1,    1,
+        2,    2,    2,    6,    2,    2,    2,    2,    2,   34,
+       34,   47,   46,   45,    6,   44,   43,   42,   41,   40,
+       38,   37,   36,   35,   32,   31,   30,   29,   28,   27,
+       26,   25,   23,   22,   21,   20,   19,   18,   17,   16,
+       15,   14,   13,   12,   11,   10,    9,    8,    5,    3,
+       49,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49,   49,   49,   49,
+       49,   49,   49,   49,   49,   49,   49
     } ;
 
 /* Table of booleans, true if rule could match eol. */
-static const flex_int32_t yy_rule_can_match_eol[7] =
+static const flex_int32_t yy_rule_can_match_eol[8] =
     {   0,
-0, 0, 0, 0, 0, 0,     };
+0, 0, 0, 0, 0, 0, 0,     };
 
 static yy_state_type yy_last_accepting_state;
 static char *yy_last_accepting_cpos;
@@ -501,8 +503,8 @@ char *yytext;
     int VidaJugador2 = 100;
     int pegarse = 0;
     int quien = 0;
-#line 505 "lex.yy.c"
-#line 506 "lex.yy.c"
+#line 507 "lex.yy.c"
+#line 508 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -719,11 +721,11 @@ YY_DECL
 		}
 
 	{
-#line 29 "combate.l"
+#line 30 "combate.l"
 
 
 
-#line 727 "lex.yy.c"
+#line 729 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -750,13 +752,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 46 )
+				if ( yy_current_state >= 50 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 55 );
+		while ( yy_base[yy_current_state] != 61 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -792,61 +794,91 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 32 "combate.l"
+#line 33 "combate.l"
 {
-                if(atoi(yytext)<41){
-                    pegarse = 1;
-                }else{
-                    pegarse = 0;
+                if(VidaJugador1 > 0 && VidaJugador2 > 0){
+                    if(atoi(yytext)<41){
+                        pegarse = 1;
+                        printf("Estan cerca para poderse golpear");
+                    }else{
+                        pegarse = 0;
+                        printf("Los personajes estan muy lejos para golpearse aburridos");
+                    }
                 }
             }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 39 "combate.l"
+#line 44 "combate.l"
 {  quien = 2;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 40 "combate.l"
+#line 45 "combate.l"
 {quien = 1;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 41 "combate.l"
+#line 46 "combate.l"
 {
+            if(VidaJugador1 > 0 && VidaJugador2 > 0){
                 if(pegarse==1){
                     if(quien == 2){
-                        VidaJugador2 = VidaJugador2-10;
-                        printf("-10 a kano por movimiento");
+                        VidaJugador2 = VidaJugador2-20;
+                        printf("-20 de daño a kano por COMBOOOO ");
                     }else{
-                        VidaJugador1 = VidaJugador1-10;
-                        printf("-10 a JohnnyCage por movimiento");
+                        VidaJugador1 = VidaJugador1-20;
+                        printf("-20 de daño a JohnnyCage por COMBOOOO");
                     }
                 }
-              }
+            }
+        }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 52 "combate.l"
+#line 59 "combate.l"
 {
-                        if(pegarse==1){
-                            if(quien == 2){
-                                VidaJugador2 = VidaJugador2-10;
-                                 printf("-10 a kano por basico");
-                            }else{
-                                VidaJugador1 = VidaJugador1-10;
-                                printf("-10 a JohnnyCage por basico");
+                        if(VidaJugador1 > 0 && VidaJugador2 > 0){
+                            if(pegarse==1){
+                                if(quien == 2){
+                                    VidaJugador2 = VidaJugador2-10;
+                                    printf("-10 de daño a kano por un golpe basico");
+                                }else{
+                                    VidaJugador1 = VidaJugador1-10;
+                                    printf("-10 de daño a JohnnyCage por un golpe basico");
+                                }
                             }
                         }
+                        
                      }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 63 "combate.l"
+#line 73 "combate.l"
+{
+            if(VidaJugador1 > 0 && VidaJugador2 > 0){
+                printf("\n Los jugadores siguen con vida ");
+                printf("\n Johnny Cage: %d", VidaJugador1);
+                printf("\n Kano: %d", VidaJugador2);
+            }else {
+                if(VidaJugador1 < 1 ){
+                    printf("\n Kano GANAAAA");
+                    printf("\n Johnny Cage tambaleandose... ");
+                }
+                if(VidaJugador2 < 1){
+                    printf("\n Johnny Cage GANAAAA");
+                    printf("\n Kano tambaleandose... \n\n");
+                }
+                    
+            }
+}
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 90 "combate.l"
 ECHO;
 	YY_BREAK
-#line 850 "lex.yy.c"
+#line 882 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1143,7 +1175,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 46 )
+			if ( yy_current_state >= 50 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1171,11 +1203,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 46 )
+		if ( yy_current_state >= 50 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 45);
+	yy_is_jam = (yy_current_state == 49);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1863,7 +1895,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 63 "combate.l"
+#line 90 "combate.l"
 
 
 int main(int argc, char *argv[]){
@@ -1876,10 +1908,11 @@ int main(int argc, char *argv[]){
         printf("\nEl archivo %s se abrio correctamente\n", argv[1]);
         yylex(); 
     }
-    printf("La vida de los jugadores es %d %d", VidaJugador1, VidaJugador2);
-    printf("FLEX finalizo la lectura del archivo %s \n", argv[1]);
+    printf("\n Johnny Cage: %d", VidaJugador1);
+    printf("\n Kano: %d \n", VidaJugador2);
+    printf("\nFLEX finalizo la lectura del archivo %s \n", argv[1]);
     
-    
+    return 0;
 }
 
 
