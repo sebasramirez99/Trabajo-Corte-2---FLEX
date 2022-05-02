@@ -1,0 +1,22 @@
+45
+Johnny Cage:A
+Sonya Blade:B
+Johnny Cage:A
+Johnny Cage:Y
+Johnny Cage:X
+Johnny Cage:ArribaA
+Sonya Blade:ArribaB
+80
+Johnny Cage:A
+Sonya Blade:B
+20
+Johnny Cage:A
+Sonya Blade:B
+Johnny Cage:AbajoA
+Sonya Blade:IzquierdaB
+30
+Johnny Cage:Bloqueo
+Sonya Blade:B
+50
+Johnny Cage:A
+Sonya Blade:B
